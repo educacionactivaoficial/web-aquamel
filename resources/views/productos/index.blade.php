@@ -47,8 +47,8 @@
                                     <tr>
                                         <td>{{ $prod->id }}</td>
                                         <td><a href="{{ route('productos.show',$prod->id) }}">{{ $prod->nombre }}</a></td>
-                                        <td>{{ $prod->proveedor_id }}</td>
-                                        <td>{{ $prod->marca_id}}</td>
+                                        <td>{{ $prod->proveedor->nombre }}</td>
+                                        <td>{{ $prod->marca->nombre}}</td>
                                         <td>{{ $prod->stock }}</td>
                                         <td>{{$prod->tamano_litros}}</td>
                                         <td>{{$prod->descripcion}}</td>

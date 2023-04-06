@@ -17,10 +17,14 @@ class CreateClientesTable extends Migration
             $table->id('id'); //
             $table->string('nombre'); //
             $table->string('apellido'); //
-            // $table->date('ultima_compra');
+            $table->bigInteger('dni')->nullable();
+            $table->bigInteger('cuit')->nullable(); 
             $table->string('email')->unique();  //
+            $table->string('razon_social',50)->nullable();
+            $table->string('direccion');
+            $table->integer('puntos')->default(0);
+            $table->date('ultima_compra');
             $table->timestamp('email_verified_at')->nullable(); //puede ser nulo
-            
             $table->timestamps();
         });
     }
